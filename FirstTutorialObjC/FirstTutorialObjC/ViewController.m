@@ -26,6 +26,11 @@
 
     MyClass *secondInstance = [[MyClass alloc] init];
 }
+- (int)sampleMethodWithReturnAndParam:(int)intParam
+{
+    MyClass *myClass = [[MyClass alloc] init];
 
+    return [myClass doSomething];
+}
 
 @end

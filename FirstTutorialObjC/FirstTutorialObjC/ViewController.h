@@ -10,6 +10,13 @@
 
 @interface ViewController : UIViewController
 
+- (void)sampleMethod;
+// - -> instance method vs. + -> class method
+
++ (void)someClassMethod;
+
+- (int)sampleMethodWithReturnAndParam:(int)intParam;
+- (int)sampleMethodWithReturnAndParam:(int)intParam withBool:(BOOL)boolParam;
 
 @end
 

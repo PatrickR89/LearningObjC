@@ -9,4 +9,8 @@
 
 @implementation MyClass
 
+- (int)doSomething
+{
+    return 100;
+}
 @end
