@@ -31,6 +31,13 @@
     int secondResult = [secondInstance privateMethod];
 
     printf("%d", secondResult);
+
+//    MyClass *someNewInstance = [secondInstance retain]; -> retain to keep one more ref for new instance
+    MyClass *someNewInstance = secondInstance;
+
+//    [instanceOfMyClass release]; -> not available in ARC
+
+//    [someNewInstance release]: -> must release after use to avoid memory leak!
 }
 - (int)sampleMethodWithReturnAndParam:(int)intParam
 {

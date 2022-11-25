@@ -19,6 +19,14 @@
 
 @implementation MyClass
 
+
+- (void)dealloc
+{
+    // insert code here to call on class release
+    // ARC forbids overrirde of dealloc
+//    [super dealloc];
+}
+
 - (int)doSomething
 {
     return 100;
