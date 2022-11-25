@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "MyClass.h"
 
 @interface ViewController ()
 
@@ -25,6 +26,11 @@
     //shorter typing version below
 
     MyClass *secondInstance = [[MyClass alloc] init];
+
+    int result = [secondInstance doSomething];
+    int secondResult = [secondInstance privateMethod];
+
+    printf("%d", secondResult);
 }
 - (int)sampleMethodWithReturnAndParam:(int)intParam
 {
