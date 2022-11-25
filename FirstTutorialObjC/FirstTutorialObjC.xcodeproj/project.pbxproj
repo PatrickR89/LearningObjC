@@ -16,6 +16,7 @@
 		CDD29B6D2930B89D00D2BF21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD29B6B2930B89D00D2BF21 /* LaunchScreen.storyboard */; };
 		CDD29B702930B89D00D2BF21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD29B6F2930B89D00D2BF21 /* main.m */; };
 		CDD29B7B2930BB0200D2BF21 /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD29B7A2930BB0200D2BF21 /* MyClass.m */; };
+		CDD29B7E2930D1F400D2BF21 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD29B7D2930D1F400D2BF21 /* Car.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		CDD29B6F2930B89D00D2BF21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CDD29B792930BB0200D2BF21 /* MyClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
 		CDD29B7A2930BB0200D2BF21 /* MyClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
+		CDD29B7C2930D1F400D2BF21 /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		CDD29B7D2930D1F400D2BF21 /* Car.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				CDD29B5E2930B89B00D2BF21 /* SceneDelegate.m */,
 				CDD29B602930B89B00D2BF21 /* ViewController.h */,
 				CDD29B612930B89B00D2BF21 /* ViewController.m */,
+				CDD29B7C2930D1F400D2BF21 /* Car.h */,
+				CDD29B7D2930D1F400D2BF21 /* Car.m */,
 				CDD29B792930BB0200D2BF21 /* MyClass.h */,
 				CDD29B7A2930BB0200D2BF21 /* MyClass.m */,
 				CDD29B632930B89B00D2BF21 /* Main.storyboard */,
@@ -158,6 +163,7 @@
 				CDD29B702930B89D00D2BF21 /* main.m in Sources */,
 				CDD29B682930B89B00D2BF21 /* FirstTutorialObjC.xcdatamodeld in Sources */,
 				CDD29B622930B89B00D2BF21 /* ViewController.m in Sources */,
+				CDD29B7E2930D1F400D2BF21 /* Car.m in Sources */,
 				CDD29B5C2930B89B00D2BF21 /* AppDelegate.m in Sources */,
 				CDD29B5F2930B89B00D2BF21 /* SceneDelegate.m in Sources */,
 			);
