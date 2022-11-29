@@ -57,6 +57,26 @@
         // do something new if no condition met
     }
 
+    if (age == 0 || age == 10) {
+        // do it!!!!
+    }
+
+    switch (age) {
+        case 5:
+            // do
+            break;
+            // if two cases return same result/callback
+        case 7:
+        case 9:
+            // do 7
+            break;
+        case 10:
+            // do 10
+            break;
+        default:
+            break;
+    }
+
     NSString *name = @"Cory";
 
     if ([name isEqualToString: @"Cory"]) {
