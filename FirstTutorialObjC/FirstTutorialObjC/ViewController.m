@@ -46,6 +46,24 @@
     [ myCar setName: @"honda"];
 
     NSString *carName = myCar.name;
+
+    int age = 10;
+
+    if (age > 10) {
+        // do something
+    } else if (age > 7){
+        // do else if
+    } else {
+        // do something new if no condition met
+    }
+
+    NSString *name = @"Cory";
+
+    if ([name isEqualToString: @"Cory"]) {
+        //do something if name equals
+    } else {
+        // do somthing else if it does not
+    }
 }
 - (int)sampleMethodWithReturnAndParam:(int)intParam
 {
