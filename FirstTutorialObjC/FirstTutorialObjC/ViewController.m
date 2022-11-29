@@ -77,6 +77,30 @@
             break;
     }
 
+    int youngAge = 0;
+
+    for (int i=0; i < 50; i++) {
+        youngAge ++;
+    }
+
+    NSArray * arrayOfNames;
+
+    for (int i=0; i < arrayOfNames.count; i++) {
+        NSString *aName = [arrayOfNames objectAtIndex:i];
+    }
+
+    for (NSString *name in arrayOfNames) {
+        // do something with each name
+    }
+
+    do {
+        age++;
+    } while ( age < 10);
+
+    while (age < 10) {
+        age++;
+    }
+
     NSString *name = @"Cory";
 
     if ([name isEqualToString: @"Cory"]) {
