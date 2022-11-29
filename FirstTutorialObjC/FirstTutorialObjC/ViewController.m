@@ -43,6 +43,7 @@
     Car *myCar = [[Car alloc] init];
 
     myCar.name = @"some car name";
+    [ myCar setName: @"honda"];
 
     NSString *carName = myCar.name;
 }

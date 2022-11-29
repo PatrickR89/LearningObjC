@@ -13,6 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSString *name;
 
+@property (nonatomic, strong) Car *anotherCar;
+
+@property (nonatomic) int mileage;
+
 @end
 
 NS_ASSUME_NONNULL_END
