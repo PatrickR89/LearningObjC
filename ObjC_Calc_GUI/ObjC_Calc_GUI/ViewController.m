@@ -30,6 +30,8 @@
     UIButton *divide;
     UIButton *multiply;
     UIButton *clear;
+    UIImageView *imageView;
+    UIImage *image;
 }
 
 - (void) loadView {
@@ -75,6 +77,7 @@
     divide = [[UIButton alloc] init];
     multiply = [[UIButton alloc] init];
     clear = [[UIButton alloc] init];
+    imageView = [[UIImageView alloc] init];
 
     NSMutableArray *views = [[NSMutableArray alloc] init];
     [views addObject:firstInputLabel];
@@ -98,6 +101,9 @@
         view.translatesAutoresizingMaskIntoConstraints = false;
         [view.heightAnchor constraintEqualToConstant:40].active = YES;
     }
+
+    [self.view addSubview:imageView];
+    imageView.translatesAutoresizingMaskIntoConstraints = false;
 
     [firstInputLabel.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor constant: -100].active = YES;
     [secondInputLabel.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor constant: -100].active = YES;
@@ -170,8 +176,13 @@
 
     [clear.topAnchor constraintEqualToAnchor:plus.bottomAnchor constant:10].active = YES;
     [clear.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
-    [clear setTitle: @"clear" forState: UIControlStateNormal];
+    [clear setTitle: @"Clear" forState: UIControlStateNormal];
     [clear setBackgroundColor: UIColor.redColor];
+
+    [imageView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:20].active = YES;
+    [imageView.widthAnchor constraintEqualToAnchor:self.view.widthAnchor].active = YES;
+    [imageView.heightAnchor constraintEqualToConstant:500].active = true;
+    [imageView setImage: [UIImage imageNamed:@"calc-proj-img1"]];
 
 }
 

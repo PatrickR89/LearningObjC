@@ -61,6 +61,7 @@
 		CDD29BB2293764DD00D2BF21 /* ObjC_Calc_GUI */ = {
 			isa = PBXGroup;
 			children = (
+				CDD29BD1293E17CB00D2BF21 /* public */,
 				CDD29BB3293764DD00D2BF21 /* AppDelegate.h */,
 				CDD29BB4293764DD00D2BF21 /* AppDelegate.m */,
 				CDD29BB6293764DD00D2BF21 /* SceneDelegate.h */,
@@ -74,6 +75,13 @@
 				CDD29BBF293764DD00D2BF21 /* ObjC_Calc_GUI.xcdatamodeld */,
 			);
 			path = ObjC_Calc_GUI;
+			sourceTree = "<group>";
+		};
+		CDD29BD1293E17CB00D2BF21 /* public */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = public;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
