@@ -43,8 +43,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-
-    self.setupUI;
+    [self setupUI];
     self.view.backgroundColor = UIColor.whiteColor;
 
 }
@@ -84,11 +83,14 @@
     [views addObject:answerResult];
     [views addObject:firstInputText];
     [views addObject:secondInputText];
-    [views addObject:plus];
-    [views addObject:minus];
-    [views addObject:divide];
-    [views addObject:multiply];
-    [views addObject:clear];
+
+    NSMutableArray *buttons = [[NSMutableArray alloc] init];
+
+    [buttons addObject:plus];
+    [buttons addObject:minus];
+    [buttons addObject:divide];
+    [buttons addObject:multiply];
+    [buttons addObject:clear];
 
 
     for (UIView *view in views) {
@@ -136,6 +138,41 @@
     answerResult.text = @"0";
     answerResult.textAlignment = NSTextAlignmentRight;
     answerResult.textColor = UIColor.blackColor;
+
+    for (UIButton * button in buttons) {
+        [self.view addSubview:button];
+        button.translatesAutoresizingMaskIntoConstraints = false;
+        [button.heightAnchor constraintEqualToConstant:40].active = YES;
+        [button setTitleColor: UIColor.blackColor forState: UIControlStateNormal];
+        [button setBackgroundColor: UIColor.blueColor];
+        button.layer.borderWidth = 1;
+        button.layer.borderColor = UIColor.blackColor.CGColor;
+        button.layer.cornerRadius = 10;
+        [button.widthAnchor constraintEqualToConstant:70].active = YES;
+
+    }
+
+    [plus.leadingAnchor constraintEqualToAnchor:self.view.centerXAnchor constant:-155].active = YES;
+    [plus setTitle: @"+" forState: UIControlStateNormal];
+    [plus.topAnchor constraintEqualToAnchor:answer.bottomAnchor constant:15].active = YES;
+
+    [minus.leadingAnchor constraintEqualToAnchor: plus.trailingAnchor constant:10].active = YES;
+    [minus setTitle: @"-" forState: UIControlStateNormal];
+    [minus.topAnchor constraintEqualToAnchor:answer.bottomAnchor constant:15].active = YES;
+
+    [divide.leadingAnchor constraintEqualToAnchor: minus.trailingAnchor constant:10].active = YES;
+    [divide setTitle: @"/" forState: UIControlStateNormal];
+    [divide.topAnchor constraintEqualToAnchor:answer.bottomAnchor constant:15].active = YES;
+
+    [multiply.leadingAnchor constraintEqualToAnchor: divide.trailingAnchor constant:10].active = YES;
+    [multiply setTitle: @"*" forState: UIControlStateNormal];
+    [multiply.topAnchor constraintEqualToAnchor:answer.bottomAnchor constant:15].active = YES;
+
+    [clear.topAnchor constraintEqualToAnchor:plus.bottomAnchor constant:10].active = YES;
+    [clear.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+    [clear setTitle: @"clear" forState: UIControlStateNormal];
+    [clear setBackgroundColor: UIColor.redColor];
+
 }
 
 @end
