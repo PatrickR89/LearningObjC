@@ -180,23 +180,23 @@
 }
 
 - (void)addOperation {
-    int result = [_firstInputText.text integerValue] + [_secondInputText.text integerValue];
-    NSString* textResult = [NSString stringWithFormat:@"%i", result];
+    double result = [_firstInputText.text doubleValue] + [_secondInputText.text doubleValue];
+    NSString* textResult = [NSString stringWithFormat:@"%.4lf", result];
     _answerResult.text = textResult;
 }
 - (void)minusOperation {
-    int result = [_firstInputText.text integerValue] - [_secondInputText.text integerValue];
-    NSString* textResult = [NSString stringWithFormat:@"%i", result];
+    double result = [_firstInputText.text doubleValue] - [_secondInputText.text doubleValue];
+    NSString* textResult = [NSString stringWithFormat:@"%.4lf", result];
     _answerResult.text = textResult;
 }
 - (void)divideOperation {
-    int result = [_firstInputText.text integerValue] / [_secondInputText.text integerValue];
-    NSString* textResult = [NSString stringWithFormat:@"%i", result];
+    double result = [_firstInputText.text doubleValue] / [_secondInputText.text doubleValue];
+    NSString* textResult = [NSString stringWithFormat:@"%.4lf", result];
     _answerResult.text = textResult;
 }
 - (void)multiplyOperation {
-    int result = [_firstInputText.text integerValue] * [_secondInputText.text integerValue];
-    NSString* textResult = [NSString stringWithFormat:@"%i", result];
+    double result = [_firstInputText.text doubleValue] * [_secondInputText.text doubleValue];
+    NSString* textResult = [NSString stringWithFormat:@"%.4lf", result];
     _answerResult.text = textResult;
 }
 - (void)clearOperation {
@@ -204,6 +204,8 @@
     _firstInputText.text = @"";
     _secondInputText.text = @"";
     _answerResult.text = @"";
+
+    [_firstInputText becomeFirstResponder];
 }
 
 @end
