@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CDD29BE0293F5B2100D2BF21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD29BDF293F5B2100D2BF21 /* AppDelegate.m */; };
+		CDD29BE3293F5B2100D2BF21 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD29BE2293F5B2100D2BF21 /* SceneDelegate.m */; };
+		CDD29BE6293F5B2100D2BF21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD29BE5293F5B2100D2BF21 /* ViewController.m */; };
+		CDD29BE9293F5B2100D2BF21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD29BE7293F5B2100D2BF21 /* Main.storyboard */; };
+		CDD29BEC293F5B2100D2BF21 /* ObjC_MultiScreen.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDD29BEA293F5B2100D2BF21 /* ObjC_MultiScreen.xcdatamodeld */; };
+		CDD29BEE293F5B2200D2BF21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD29BED293F5B2200D2BF21 /* Assets.xcassets */; };
+		CDD29BF1293F5B2200D2BF21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD29BEF293F5B2200D2BF21 /* LaunchScreen.storyboard */; };
+		CDD29BF4293F5B2200D2BF21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD29BF3293F5B2200D2BF21 /* main.m */; };
+		CDD29BFC293F5C8A00D2BF21 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD29BFB293F5C8A00D2BF21 /* DetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CDD29BDB293F5B2100D2BF21 /* ObjC_MultiScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjC_MultiScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDD29BDE293F5B2100D2BF21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CDD29BDF293F5B2100D2BF21 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CDD29BE1293F5B2100D2BF21 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		CDD29BE2293F5B2100D2BF21 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		CDD29BE4293F5B2100D2BF21 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CDD29BE5293F5B2100D2BF21 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CDD29BE8293F5B2100D2BF21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDD29BEB293F5B2100D2BF21 /* ObjC_MultiScreen.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ObjC_MultiScreen.xcdatamodel; sourceTree = "<group>"; };
+		CDD29BED293F5B2200D2BF21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDD29BF0293F5B2200D2BF21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDD29BF2293F5B2200D2BF21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDD29BF3293F5B2200D2BF21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CDD29BFA293F5C8A00D2BF21 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		CDD29BFB293F5C8A00D2BF21 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDD29BD8293F5B2100D2BF21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CDD29BD2293F5B2100D2BF21 = {
+			isa = PBXGroup;
+			children = (
+				CDD29BDD293F5B2100D2BF21 /* ObjC_MultiScreen */,
+				CDD29BDC293F5B2100D2BF21 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CDD29BDC293F5B2100D2BF21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDD29BDB293F5B2100D2BF21 /* ObjC_MultiScreen.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDD29BDD293F5B2100D2BF21 /* ObjC_MultiScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CDD29BDE293F5B2100D2BF21 /* AppDelegate.h */,
+				CDD29BDF293F5B2100D2BF21 /* AppDelegate.m */,
+				CDD29BE1293F5B2100D2BF21 /* SceneDelegate.h */,
+				CDD29BE2293F5B2100D2BF21 /* SceneDelegate.m */,
+				CDD29BE4293F5B2100D2BF21 /* ViewController.h */,
+				CDD29BE5293F5B2100D2BF21 /* ViewController.m */,
+				CDD29BFA293F5C8A00D2BF21 /* DetailViewController.h */,
+				CDD29BFB293F5C8A00D2BF21 /* DetailViewController.m */,
+				CDD29BE7293F5B2100D2BF21 /* Main.storyboard */,
+				CDD29BED293F5B2200D2BF21 /* Assets.xcassets */,
+				CDD29BEF293F5B2200D2BF21 /* LaunchScreen.storyboard */,
+				CDD29BF2293F5B2200D2BF21 /* Info.plist */,
+				CDD29BF3293F5B2200D2BF21 /* main.m */,
+				CDD29BEA293F5B2100D2BF21 /* ObjC_MultiScreen.xcdatamodeld */,
+			);
+			path = ObjC_MultiScreen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDD29BDA293F5B2100D2BF21 /* ObjC_MultiScreen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDD29BF7293F5B2200D2BF21 /* Build configuration list for PBXNativeTarget "ObjC_MultiScreen" */;
+			buildPhases = (
+				CDD29BD7293F5B2100D2BF21 /* Sources */,
+				CDD29BD8293F5B2100D2BF21 /* Frameworks */,
+				CDD29BD9293F5B2100D2BF21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ObjC_MultiScreen;
+			productName = ObjC_MultiScreen;
+			productReference = CDD29BDB293F5B2100D2BF21 /* ObjC_MultiScreen.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDD29BD3293F5B2100D2BF21 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					CDD29BDA293F5B2100D2BF21 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = CDD29BD6293F5B2100D2BF21 /* Build configuration list for PBXProject "ObjC_MultiScreen" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDD29BD2293F5B2100D2BF21;
+			productRefGroup = CDD29BDC293F5B2100D2BF21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDD29BDA293F5B2100D2BF21 /* ObjC_MultiScreen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDD29BD9293F5B2100D2BF21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDD29BF1293F5B2200D2BF21 /* LaunchScreen.storyboard in Resources */,
+				CDD29BEE293F5B2200D2BF21 /* Assets.xcassets in Resources */,
+				CDD29BE9293F5B2100D2BF21 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDD29BD7293F5B2100D2BF21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDD29BF4293F5B2200D2BF21 /* main.m in Sources */,
+				CDD29BE6293F5B2100D2BF21 /* ViewController.m in Sources */,
+				CDD29BEC293F5B2100D2BF21 /* ObjC_MultiScreen.xcdatamodeld in Sources */,
+				CDD29BE0293F5B2100D2BF21 /* AppDelegate.m in Sources */,
+				CDD29BE3293F5B2100D2BF21 /* SceneDelegate.m in Sources */,
+				CDD29BFC293F5C8A00D2BF21 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CDD29BE7293F5B2100D2BF21 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDD29BE8293F5B2100D2BF21 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CDD29BEF293F5B2200D2BF21 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDD29BF0293F5B2200D2BF21 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CDD29BF5293F5B2200D2BF21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CDD29BF6293F5B2200D2BF21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDD29BF8293F5B2200D2BF21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y2ZMF37QVQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ObjC_MultiScreen/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myorganization.ObjC-MultiScreen";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CDD29BF9293F5B2200D2BF21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y2ZMF37QVQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ObjC_MultiScreen/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myorganization.ObjC-MultiScreen";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDD29BD6293F5B2100D2BF21 /* Build configuration list for PBXProject "ObjC_MultiScreen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDD29BF5293F5B2200D2BF21 /* Debug */,
+				CDD29BF6293F5B2200D2BF21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDD29BF7293F5B2200D2BF21 /* Build configuration list for PBXNativeTarget "ObjC_MultiScreen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDD29BF8293F5B2200D2BF21 /* Debug */,
+				CDD29BF9293F5B2200D2BF21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CDD29BEA293F5B2100D2BF21 /* ObjC_MultiScreen.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CDD29BEB293F5B2100D2BF21 /* ObjC_MultiScreen.xcdatamodel */,
+			);
+			currentVersion = CDD29BEB293F5B2100D2BF21 /* ObjC_MultiScreen.xcdatamodel */;
+			path = ObjC_MultiScreen.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CDD29BD3293F5B2100D2BF21 /* Project object */;
+}
