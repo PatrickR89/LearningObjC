@@ -181,22 +181,22 @@
 
 - (void)addOperation {
     double result = [_firstInputText.text doubleValue] + [_secondInputText.text doubleValue];
-    NSString* textResult = [NSString stringWithFormat:@"%.4lf", result];
+    NSString* textResult = [@(result) stringValue];
     _answerResult.text = textResult;
 }
 - (void)minusOperation {
     double result = [_firstInputText.text doubleValue] - [_secondInputText.text doubleValue];
-    NSString* textResult = [NSString stringWithFormat:@"%.4lf", result];
+    NSString* textResult = [@(result) stringValue];
     _answerResult.text = textResult;
 }
 - (void)divideOperation {
     double result = [_firstInputText.text doubleValue] / [_secondInputText.text doubleValue];
-    NSString* textResult = [NSString stringWithFormat:@"%.4lf", result];
+    NSString* textResult = [@(result) stringValue];
     _answerResult.text = textResult;
 }
 - (void)multiplyOperation {
     double result = [_firstInputText.text doubleValue] * [_secondInputText.text doubleValue];
-    NSString* textResult = [NSString stringWithFormat:@"%.4lf", result];
+    NSString* textResult = [@(result) stringValue];
     _answerResult.text = textResult;
 }
 - (void)clearOperation {
