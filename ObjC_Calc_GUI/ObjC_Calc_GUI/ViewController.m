@@ -9,35 +9,14 @@
 
 @interface ViewController ()
 
-- (UILabel*)createTitleLabel;
-- (void) setupUI;
-
-
 @end
 
 @implementation ViewController
 
-{
-    UILabel *titleLabel;
-    UILabel *firstInputLabel;
-    UILabel *secondInputLabel;
-    UILabel *answer;
-    UILabel *answerResult;
-    UITextField *firstInputText;
-    UITextField *secondInputText;
-    UIButton *plus;
-    UIButton *minus;
-    UIButton *divide;
-    UIButton *multiply;
-    UIButton *clear;
-    UIImageView *imageView;
-    UIImage *image;
-}
-
 - (void) loadView {
     [super loadView];
 
-    titleLabel = self.createTitleLabel;
+    self.titleLabel = self.createTitleLabel;
 
 }
 
@@ -66,34 +45,34 @@
 }
 
 - (void)setupUI {
-    firstInputLabel = [[UILabel alloc] init];
-    secondInputLabel = [[UILabel alloc] init];
-    answer = [[UILabel alloc] init];
-    answerResult = [[UILabel alloc] init];
-    firstInputText = [[UITextField alloc] init];
-    secondInputText = [[UITextField alloc] init];
-    plus = [[UIButton alloc] init];
-    minus = [[UIButton alloc] init];
-    divide = [[UIButton alloc] init];
-    multiply = [[UIButton alloc] init];
-    clear = [[UIButton alloc] init];
-    imageView = [[UIImageView alloc] init];
+    self.firstInputLabel = [[UILabel alloc] init];
+    self.secondInputLabel = [[UILabel alloc] init];
+    self.answer = [[UILabel alloc] init];
+    self.answerResult = [[UILabel alloc] init];
+    self.firstInputText = [[UITextField alloc] init];
+    self.secondInputText = [[UITextField alloc] init];
+    self.plus = [[UIButton alloc] init];
+    self.minus = [[UIButton alloc] init];
+    self.divide = [[UIButton alloc] init];
+    self.multiply = [[UIButton alloc] init];
+    self.clear = [[UIButton alloc] init];
+    self.imageView = [[UIImageView alloc] init];
 
     NSMutableArray *views = [[NSMutableArray alloc] init];
-    [views addObject:firstInputLabel];
-    [views addObject:secondInputLabel];
-    [views addObject:answer];
-    [views addObject:answerResult];
-    [views addObject:firstInputText];
-    [views addObject:secondInputText];
+    [views addObject:self.firstInputLabel];
+    [views addObject:self.secondInputLabel];
+    [views addObject:self.answer];
+    [views addObject:self.answerResult];
+    [views addObject:self.firstInputText];
+    [views addObject:self.secondInputText];
 
     NSMutableArray *buttons = [[NSMutableArray alloc] init];
 
-    [buttons addObject:plus];
-    [buttons addObject:minus];
-    [buttons addObject:divide];
-    [buttons addObject:multiply];
-    [buttons addObject:clear];
+    [buttons addObject:self.plus];
+    [buttons addObject:self.minus];
+    [buttons addObject:self.divide];
+    [buttons addObject:self.multiply];
+    [buttons addObject:self.clear];
 
 
     for (UIView *view in views) {
@@ -102,48 +81,53 @@
         [view.heightAnchor constraintEqualToConstant:40].active = YES;
     }
 
-    [self.view addSubview:imageView];
-    imageView.translatesAutoresizingMaskIntoConstraints = false;
+    [self.view addSubview:_imageView];
+    _imageView.translatesAutoresizingMaskIntoConstraints = false;
 
-    [firstInputLabel.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor constant: -100].active = YES;
-    [secondInputLabel.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor constant: -100].active = YES;
-    [answer.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor constant: -100].active = YES;
-    [firstInputText.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor constant: 100].active = YES;
-    [secondInputText.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor constant: 100].active = YES;
-    [answerResult.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor constant: 100].active = YES;
-    [firstInputLabel.widthAnchor constraintEqualToConstant: 150].active = YES;
-    [secondInputLabel.widthAnchor constraintEqualToAnchor: firstInputLabel.widthAnchor].active = YES;
-    [answer.widthAnchor constraintEqualToAnchor: firstInputLabel.widthAnchor].active = YES;
-    [firstInputText.widthAnchor constraintEqualToAnchor: firstInputLabel.widthAnchor].active = YES;
-    [secondInputText.widthAnchor constraintEqualToAnchor: firstInputLabel.widthAnchor].active = YES;
-    [answerResult.widthAnchor constraintEqualToAnchor: firstInputLabel.widthAnchor].active = YES;
-    [firstInputText.centerYAnchor constraintEqualToAnchor: firstInputLabel.centerYAnchor].active = YES;
-    [secondInputText.centerYAnchor constraintEqualToAnchor: secondInputLabel.centerYAnchor].active = YES;
-    [answerResult.centerYAnchor constraintEqualToAnchor: answer.centerYAnchor].active = YES;
-    [firstInputLabel.topAnchor constraintEqualToAnchor: titleLabel.bottomAnchor constant:80].active = YES;
-    [secondInputLabel.topAnchor constraintEqualToAnchor:firstInputLabel.bottomAnchor constant:40].active = YES;
-    [answer.topAnchor constraintEqualToAnchor:secondInputLabel.bottomAnchor constant:40].active = YES;
+    [_firstInputLabel.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor constant: -100].active = YES;
+    [_secondInputLabel.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor constant: -100].active = YES;
+    [_answer.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor constant: -100].active = YES;
+    [_firstInputText.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor constant: 100].active = YES;
+    [_secondInputText.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor constant: 100].active = YES;
+    [_answerResult.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor constant: 100].active = YES;
+    [_firstInputLabel.widthAnchor constraintEqualToConstant: 150].active = YES;
+    [_secondInputLabel.widthAnchor constraintEqualToAnchor: _firstInputLabel.widthAnchor].active = YES;
+    [_answer.widthAnchor constraintEqualToAnchor: _firstInputLabel.widthAnchor].active = YES;
+    [_firstInputText.widthAnchor constraintEqualToAnchor: _firstInputLabel.widthAnchor].active = YES;
+    [_secondInputText.widthAnchor constraintEqualToAnchor: _firstInputLabel.widthAnchor].active = YES;
+    [_answerResult.widthAnchor constraintEqualToAnchor: _firstInputLabel.widthAnchor].active = YES;
+    [_firstInputText.centerYAnchor constraintEqualToAnchor: _firstInputLabel.centerYAnchor].active = YES;
+    [_secondInputText.centerYAnchor constraintEqualToAnchor: _secondInputLabel.centerYAnchor].active = YES;
+    [_answerResult.centerYAnchor constraintEqualToAnchor: _answer.centerYAnchor].active = YES;
+    [_firstInputLabel.topAnchor constraintEqualToAnchor: _titleLabel.bottomAnchor constant:80].active = YES;
+    [_secondInputLabel.topAnchor constraintEqualToAnchor:_firstInputLabel.bottomAnchor constant:40].active = YES;
+    [_answer.topAnchor constraintEqualToAnchor:_secondInputLabel.bottomAnchor constant:40].active = YES;
 
-    firstInputLabel.text = @"Enter first value:";
-    firstInputLabel.textColor = UIColor.systemRedColor;
-    secondInputLabel.text = @"Enter second value:";
-    secondInputLabel.textColor = UIColor.systemRedColor;
-    answer.text = @"Result:";
-    answer.textColor = UIColor.systemRedColor;
+    _firstInputLabel.text = @"Enter first value:";
+    _firstInputLabel.textColor = UIColor.systemRedColor;
+    _secondInputLabel.text = @"Enter second value:";
+    _secondInputLabel.textColor = UIColor.systemRedColor;
+    _answer.text = @"Result:";
+    _answer.textColor = UIColor.systemRedColor;
 
-    firstInputText.layer.borderColor = UIColor.blackColor.CGColor;
-    firstInputText.layer.borderWidth = 1;
-    firstInputText.layer.cornerRadius = 10;
-    firstInputText.textAlignment = NSTextAlignmentRight;
-    firstInputText.textColor = UIColor.blackColor;
-    secondInputText.layer.borderColor = UIColor.blackColor.CGColor;
-    secondInputText.layer.borderWidth = 1;
-    secondInputText.layer.cornerRadius = 10;
-    secondInputText.textAlignment = NSTextAlignmentRight;
-    secondInputText.textColor = UIColor.blackColor;
-    answerResult.text = @"0";
-    answerResult.textAlignment = NSTextAlignmentRight;
-    answerResult.textColor = UIColor.blackColor;
+    _firstInputText.layer.borderColor = UIColor.blackColor.CGColor;
+    _firstInputText.layer.borderWidth = 1;
+    _firstInputText.layer.cornerRadius = 10;
+    _firstInputText.textAlignment = NSTextAlignmentRight;
+    _firstInputText.textColor = UIColor.blackColor;
+    _secondInputText.layer.borderColor = UIColor.blackColor.CGColor;
+    _secondInputText.layer.borderWidth = 1;
+    _secondInputText.layer.cornerRadius = 10;
+    _secondInputText.textAlignment = NSTextAlignmentRight;
+    _secondInputText.textColor = UIColor.blackColor;
+    _answerResult.text = @"0";
+    _answerResult.textAlignment = NSTextAlignmentRight;
+    _answerResult.textColor = UIColor.blackColor;
+
+    _firstInputText.delegate = self;
+    _secondInputText.delegate = self;
+
+
 
     for (UIButton * button in buttons) {
         [self.view addSubview:button];
@@ -158,32 +142,68 @@
 
     }
 
-    [plus.leadingAnchor constraintEqualToAnchor:self.view.centerXAnchor constant:-155].active = YES;
-    [plus setTitle: @"+" forState: UIControlStateNormal];
-    [plus.topAnchor constraintEqualToAnchor:answer.bottomAnchor constant:15].active = YES;
+    [_plus.leadingAnchor constraintEqualToAnchor:self.view.centerXAnchor constant:-155].active = YES;
+    [_plus setTitle: @"+" forState: UIControlStateNormal];
+    [_plus.topAnchor constraintEqualToAnchor:_answer.bottomAnchor constant:15].active = YES;
 
-    [minus.leadingAnchor constraintEqualToAnchor: plus.trailingAnchor constant:10].active = YES;
-    [minus setTitle: @"-" forState: UIControlStateNormal];
-    [minus.topAnchor constraintEqualToAnchor:answer.bottomAnchor constant:15].active = YES;
+    [_minus.leadingAnchor constraintEqualToAnchor: _plus.trailingAnchor constant:10].active = YES;
+    [_minus setTitle: @"-" forState: UIControlStateNormal];
+    [_minus.topAnchor constraintEqualToAnchor:_answer.bottomAnchor constant:15].active = YES;
 
-    [divide.leadingAnchor constraintEqualToAnchor: minus.trailingAnchor constant:10].active = YES;
-    [divide setTitle: @"/" forState: UIControlStateNormal];
-    [divide.topAnchor constraintEqualToAnchor:answer.bottomAnchor constant:15].active = YES;
+    [_divide.leadingAnchor constraintEqualToAnchor: _minus.trailingAnchor constant:10].active = YES;
+    [_divide setTitle: @"/" forState: UIControlStateNormal];
+    [_divide.topAnchor constraintEqualToAnchor:_answer.bottomAnchor constant:15].active = YES;
 
-    [multiply.leadingAnchor constraintEqualToAnchor: divide.trailingAnchor constant:10].active = YES;
-    [multiply setTitle: @"*" forState: UIControlStateNormal];
-    [multiply.topAnchor constraintEqualToAnchor:answer.bottomAnchor constant:15].active = YES;
+    [_multiply.leadingAnchor constraintEqualToAnchor: _divide.trailingAnchor constant:10].active = YES;
+    [_multiply setTitle: @"*" forState: UIControlStateNormal];
+    [_multiply.topAnchor constraintEqualToAnchor:_answer.bottomAnchor constant:15].active = YES;
 
-    [clear.topAnchor constraintEqualToAnchor:plus.bottomAnchor constant:10].active = YES;
-    [clear.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
-    [clear setTitle: @"Clear" forState: UIControlStateNormal];
-    [clear setBackgroundColor: UIColor.redColor];
+    [_clear.topAnchor constraintEqualToAnchor:_plus.bottomAnchor constant:10].active = YES;
+    [_clear.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+    [_clear setTitle: @"Clear" forState: UIControlStateNormal];
+    [_clear setBackgroundColor: UIColor.redColor];
 
-    [imageView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:20].active = YES;
-    [imageView.widthAnchor constraintEqualToAnchor:self.view.widthAnchor].active = YES;
-    [imageView.heightAnchor constraintEqualToConstant:500].active = true;
-    [imageView setImage: [UIImage imageNamed:@"calc-proj-img1"]];
+    [_imageView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor constant:20].active = YES;
+    [_imageView.widthAnchor constraintEqualToAnchor:self.view.widthAnchor].active = YES;
+    [_imageView setImage: [UIImage imageNamed:@"calc-proj-img1"]];
 
+    [self addButtonTargets];
+
+}
+
+- (void)addButtonTargets {
+    [_plus addTarget:self action: @selector(addOperation) forControlEvents: UIControlEventTouchUpInside];
+    [_minus addTarget:self action: @selector(minusOperation) forControlEvents: UIControlEventTouchUpInside];
+    [_divide addTarget:self action: @selector(divideOperation) forControlEvents: UIControlEventTouchUpInside];
+    [_multiply addTarget:self action: @selector(multiplyOperation) forControlEvents: UIControlEventTouchUpInside];
+    [_clear addTarget:self action: @selector(clearOperation) forControlEvents: UIControlEventTouchUpInside];
+}
+
+- (void)addOperation {
+    int result = [_firstInputText.text integerValue] + [_secondInputText.text integerValue];
+    NSString* textResult = [NSString stringWithFormat:@"%i", result];
+    _answerResult.text = textResult;
+}
+- (void)minusOperation {
+    int result = [_firstInputText.text integerValue] - [_secondInputText.text integerValue];
+    NSString* textResult = [NSString stringWithFormat:@"%i", result];
+    _answerResult.text = textResult;
+}
+- (void)divideOperation {
+    int result = [_firstInputText.text integerValue] / [_secondInputText.text integerValue];
+    NSString* textResult = [NSString stringWithFormat:@"%i", result];
+    _answerResult.text = textResult;
+}
+- (void)multiplyOperation {
+    int result = [_firstInputText.text integerValue] * [_secondInputText.text integerValue];
+    NSString* textResult = [NSString stringWithFormat:@"%i", result];
+    _answerResult.text = textResult;
+}
+- (void)clearOperation {
+
+    _firstInputText.text = @"";
+    _secondInputText.text = @"";
+    _answerResult.text = @"";
 }
 
 @end
