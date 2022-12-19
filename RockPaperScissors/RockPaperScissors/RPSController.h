@@ -16,7 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) RPSGame *game;
 
 - (void)throwDown: (Move) playersTurn;
-- (Move)generateMove;
 - (BOOL)defeats: (RPSMove*) move;
 
 @end
