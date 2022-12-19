@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger, Move) {
     Rock,
     Paper,
-    Scissors
+    Scissors,
+    Invalid
 };
 
 @interface RPSMove : NSObject
