@@ -9,4 +9,13 @@
 
 @implementation RPSMove
 
+- (instancetype)initWithMove:(Move)move {
+    self = [super init];
+
+    if(self) {
+        _move = move;
+    }
+
+    return self;
+}
 @end

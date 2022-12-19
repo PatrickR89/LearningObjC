@@ -9,4 +9,15 @@
 
 @implementation RPSGame
 
+- (instancetype)initWithFirstTurn:(RPSMove *)playerTurn secondTurn:(RPSMove *)computerTurn {
+    self = [super init];
+
+    if(self) {
+        _firstTurn = playerTurn;
+        _secondTurn = computerTurn;
+    }
+
+    return self;
+}
+
 @end

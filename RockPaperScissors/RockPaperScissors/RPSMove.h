@@ -17,6 +17,10 @@ typedef NS_ENUM(NSInteger, Move) {
 
 @interface RPSMove : NSObject
 
+@property (nonatomic) Move move;
+
+- (instancetype)initWithMove: (Move) move;
+
 @end
 
 NS_ASSUME_NONNULL_END
