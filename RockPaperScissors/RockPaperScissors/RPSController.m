@@ -17,7 +17,18 @@
                                         secondTurn:compTurn];
 }
 
-- (BOOL)defeats:(RPSMove *)move {
-    return false;
+- (NSString*)messageForGame:(RPSGame *)game {
+    if (game.firstTurn.move == game.secondTurn.move) {
+        return @"It's a tie!";
+    }
+
+    NSString *winningMove = [[game winner] description];
+    NSString *losingMove = [[game loser] description];
+    NSString *result = [game resultsString:game];
+
+    NSString *wholeString = [NSString stringWithFormat:@"%@ %@ %@%@ %@", winningMove, @"beats", losingMove, @".", result];
+
+    return wholeString;
 }
+
 @end

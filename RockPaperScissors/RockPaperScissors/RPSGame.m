@@ -20,4 +20,22 @@
     return self;
 }
 
+- (RPSMove*) winner {
+    return [self.firstTurn defeats:self.secondTurn] ? self.firstTurn : self.secondTurn;
+}
+
+- (RPSMove*) loser {
+    return [self.firstTurn defeats:self.secondTurn] ? self.secondTurn : self.firstTurn;
+}
+
+- (NSString*) resultsString:(RPSGame *)gameRes {
+    if ([self.firstTurn defeats:self.secondTurn]) {
+        return @"You win!";
+    } else {
+        return @"You loose!";
+    }
+
+    return @"Ran away!";
+}
+
 @end

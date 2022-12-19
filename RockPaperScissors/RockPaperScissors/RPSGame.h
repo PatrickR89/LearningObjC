@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) RPSMove *secondTurn;
 
 - (instancetype)initWithFirstTurn: (RPSMove*)playerTurn secondTurn: (RPSMove*)computerTurn;
+- (RPSMove*)winner;
+- (RPSMove*)loser;
+- (NSString*)resultsString: (RPSGame*) gameRes;
+
 @end
 
 NS_ASSUME_NONNULL_END

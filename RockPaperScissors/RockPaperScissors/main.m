@@ -15,7 +15,10 @@ int main(int argc, const char * argv[]) {
         RSPController *gameController = [[RSPController alloc] init];
 
         [gameController throwDown:Rock];
-        NSLog(@"Hello, World!");
+
+        NSString *result = [gameController messageForGame:gameController.game];
+
+        NSLog(@"%@", result);
     }
     return 0;
 }

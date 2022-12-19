@@ -51,4 +51,33 @@
 
     return Rock;
 }
+
+- (BOOL)defeats:(RPSMove *)opponent {
+    if ((self.move == Paper && opponent.move == Rock) ||
+        (self.move == Scissors && opponent.move == Paper) ||
+        (self.move == Rock && opponent.move == Scissors)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+- (NSString*)description {
+    switch (self.move) {
+        case 0:
+            return @"Rock";
+            break;
+        case 1:
+            return @"Paper";
+            break;
+        case 2:
+            return @"Scissors";
+            break;
+        default:
+            return @"Missed move";
+            break;
+    }
+
+    return @"No such move";
+}
 @end
