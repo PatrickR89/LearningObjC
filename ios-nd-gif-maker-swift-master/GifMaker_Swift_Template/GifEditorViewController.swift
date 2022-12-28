@@ -10,15 +10,14 @@ import UIKit
 
 class GifEditorViewController: UIViewController {
     @IBOutlet var gifImageView: UIImageView!
+    @IBOutlet var captionTextField: UITextField!
     var gifUrl: URL? = nil
+    var gif: Gif?
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        if let gifUrl = gifUrl {
-            let gifRecording = UIImage.gif(url: gifUrl.absoluteString)
-            gifImageView.image = gifRecording
-        }
+            gifImageView.image = gif?.gifImage
     }
     override func viewDidLoad() {
         super.viewDidLoad()
