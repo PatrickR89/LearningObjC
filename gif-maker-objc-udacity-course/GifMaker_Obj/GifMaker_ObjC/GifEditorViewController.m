@@ -13,6 +13,7 @@
 #import "UIImage+animatedGif.h"
 
 #import "GifMaker_Objc-Swift.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface GifEditorViewController ()
 
@@ -115,6 +116,7 @@ static const int kLoopCount = 0; // 0 means loop forever
     self.gif.caption = self.captionTextField.text;
 
     Regift *regift = [[Regift alloc] initWithSourceFileURL:self.gif.videoURL destinationFileURL:nil frameCount:kFrameCount delayTime:kDelayTime loopCount:kLoopCount];
+
     
     UIFont *captionFont = self.captionTextField.font;
     NSURL *gifURL = [regift createGif:self.captionTextField.text font:captionFont];                     

@@ -14,6 +14,4 @@
 @property (nonatomic) Gif *gif;
 @property (weak, nonatomic) IBOutlet UIImageView *gifImageView;
 
-
-
 @end
