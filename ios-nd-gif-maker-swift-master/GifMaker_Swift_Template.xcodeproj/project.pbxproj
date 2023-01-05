@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A93B3B081D2D3F7900BE1662 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93B3B041D2D3F7900BE1662 /* LaunchScreen.xib */; };
 		A93B3B091D2D3F7900BE1662 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93B3B061D2D3F7900BE1662 /* Main.storyboard */; };
+		CD5DA1C429673A9100BD7608 /* GifPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DA1C329673A9100BD7608 /* GifPreviewViewController.swift */; };
 		CDFA8327295C432D009DB63E /* UIViewController+Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA8326295C432D009DB63E /* UIViewController+Record.swift */; };
 		CDFA832B295C49B5009DB63E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA832A295C49B5009DB63E /* WelcomeViewController.swift */; };
 		CDFA832D295C5137009DB63E /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA832C295C5137009DB63E /* UIImage+Gif.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		A93B3B051D2D3F7900BE1662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A93B3B071D2D3F7900BE1662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD5DA1C329673A9100BD7608 /* GifPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifPreviewViewController.swift; sourceTree = "<group>"; };
 		CDFA8326295C432D009DB63E /* UIViewController+Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Record.swift"; sourceTree = "<group>"; };
 		CDFA832A295C49B5009DB63E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CDFA832C295C5137009DB63E /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				CDFA832A295C49B5009DB63E /* WelcomeViewController.swift */,
 				CDFA832E295C55C0009DB63E /* GifEditorViewController.swift */,
+				CD5DA1C329673A9100BD7608 /* GifPreviewViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				CDFA832D295C5137009DB63E /* UIImage+Gif.swift in Sources */,
 				CDFA8327295C432D009DB63E /* UIViewController+Record.swift in Sources */,
 				CDFA832F295C55C0009DB63E /* GifEditorViewController.swift in Sources */,
+				CD5DA1C429673A9100BD7608 /* GifPreviewViewController.swift in Sources */,
 				EDFAA9211CDA9C3100D2CB08 /* RegiftCaption.swift in Sources */,
 				EDFAA8ED1CDA99A500D2CB08 /* AppDelegate.swift in Sources */,
 				EDFAA91F1CDA9C3100D2CB08 /* AVAssetImageGeneratorTimePoints.swift in Sources */,

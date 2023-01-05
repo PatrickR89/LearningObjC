@@ -203,6 +203,9 @@
                     <navigationItem key="navigationItem" title="Title" id="98w-hN-q9u">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="kvy-5V-EgW">
                             <color key="tintColor" red="1" green="0.25490196079999999" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="presentPreview:" destination="gN0-HT-VRx" id="w5a-VT-XK5"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -217,7 +220,7 @@
         <!--Gif Preview View Controller-->
         <scene sceneID="6jO-Zd-0F6">
             <objects>
-                <viewController storyboardIdentifier="PreviewViewController" title="Preview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cB7-Y1-ZFX" userLabel="Gif Preview View Controller" customClass="PreviewViewController" customModule="GifMaker_Swift_Template" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PreviewViewController" title="Preview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cB7-Y1-ZFX" userLabel="Gif Preview View Controller" customClass="GifPreviewViewController" customModule="GifMaker_Swift_Template" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rxa-Xz-1J1"/>
                         <viewControllerLayoutGuide type="bottom" id="zEa-bK-uMp"/>
