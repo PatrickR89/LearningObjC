@@ -19,7 +19,7 @@ extension UIViewController: UINavigationControllerDelegate, UIImagePickerControl
 
     func presentVideoOptions(sender: Any) {
         if !UIImagePickerController.isSourceTypeAvailable(.camera) {
-
+            launchPhotoLibrary()
         } else {
             let newGifActionSheet = UIAlertController(title: "Create new gif", message: nil, preferredStyle: .actionSheet)
 
@@ -28,7 +28,7 @@ extension UIViewController: UINavigationControllerDelegate, UIImagePickerControl
             })
 
             let chooseFromExisting = UIAlertAction(title: "Choose from existing", style: .default, handler: { _ in
-                // self.launchPhotoLibrary()
+                 self.launchPhotoLibrary()
             })
 
             let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -47,6 +47,15 @@ extension UIViewController: UINavigationControllerDelegate, UIImagePickerControl
     func launchVideoCamera(sender: Any?) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.sourceType = .camera
+        imagePickerController.mediaTypes = [UTType.movie.identifier]
+        imagePickerController.allowsEditing = true
+        imagePickerController.delegate = self
+        self.present(imagePickerController, animated: true)
+    }
+
+    func launchPhotoLibrary() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = .photoLibrary
         imagePickerController.mediaTypes = [UTType.movie.identifier]
         imagePickerController.allowsEditing = true
         imagePickerController.delegate = self
