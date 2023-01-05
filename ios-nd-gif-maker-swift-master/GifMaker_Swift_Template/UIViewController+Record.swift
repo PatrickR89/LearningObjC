@@ -17,8 +17,34 @@ let kFrameRate: Float = 15;
 
 extension UIViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    func presentVideoOptions(sender: Any) {
+        if !UIImagePickerController.isSourceTypeAvailable(.camera) {
 
-    func launchVideoCamera(sender: Any) {
+        } else {
+            let newGifActionSheet = UIAlertController(title: "Create new gif", message: nil, preferredStyle: .actionSheet)
+
+            let recordVideo = UIAlertAction(title: "Record video", style: .default, handler: { _ in
+                self.launchVideoCamera(sender: sender)
+            })
+
+            let chooseFromExisting = UIAlertAction(title: "Choose from existing", style: .default, handler: { _ in
+                // self.launchPhotoLibrary()
+            })
+
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+            newGifActionSheet.addAction(recordVideo)
+            newGifActionSheet.addAction(chooseFromExisting)
+            newGifActionSheet.addAction(cancel)
+
+            self.present(newGifActionSheet, animated: true)
+
+            let pinkColor = UIColor(red: 255.0/255.0, green: 65.0/255.0, blue: 112.0/255.0, alpha: 1.0)
+            newGifActionSheet.view.tintColor = pinkColor
+        }
+    }
+
+    func launchVideoCamera(sender: Any?) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.sourceType = .camera
         imagePickerController.mediaTypes = [UTType.movie.identifier]

@@ -24,6 +24,6 @@ class WelcomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func launchVideoCamera(_ sender: Any) {
-        self.launchVideoCamera(sender: sender)
+        self.presentVideoOptions(sender: sender)
     }
 }
