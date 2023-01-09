@@ -13,7 +13,7 @@ import UniformTypeIdentifiers
 let kFrameCount: Int = 16;
 let kDelayTime: Float = 0.2;
 let kLoopCount: Int = 0;
-let kFrameRate: Float = 15;
+let kFrameRate: Int = 15;
 
 extension UIViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
@@ -44,21 +44,22 @@ extension UIViewController: UINavigationControllerDelegate, UIImagePickerControl
         }
     }
 
+    func imagePicker(source: UIImagePickerController.SourceType) -> UIImagePickerController {
+        let picker = UIImagePickerController()
+        picker.sourceType = source
+        picker.mediaTypes = [UTType.movie.identifier]
+        picker.delegate = self
+        picker.allowsEditing = true
+        return picker
+    }
+
     func launchVideoCamera(sender: Any?) {
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.sourceType = .camera
-        imagePickerController.mediaTypes = [UTType.movie.identifier]
-        imagePickerController.allowsEditing = true
-        imagePickerController.delegate = self
+        let imagePickerController = imagePicker(source: .camera)
         self.present(imagePickerController, animated: true)
     }
 
     func launchPhotoLibrary() {
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.sourceType = .photoLibrary
-        imagePickerController.mediaTypes = [UTType.movie.identifier]
-        imagePickerController.allowsEditing = true
-        imagePickerController.delegate = self
+        let imagePickerController = imagePicker(source: .photoLibrary)
         self.present(imagePickerController, animated: true)
     }
 
@@ -67,9 +68,16 @@ extension UIViewController: UINavigationControllerDelegate, UIImagePickerControl
 
         if mediaType == UTType.movie.identifier {
             let videoURL = info[UIImagePickerController.InfoKey.mediaType] as! URL
-//            UISaveVideoAtPathToSavedPhotosAlbum(videoURL.path, nil, nil, nil)
+            let start = info[UIImagePickerController.InfoKey(rawValue: "_UIImagePickerControllerVideoEditingStart")] as? Float
+            let end = info[UIImagePickerController.InfoKey(rawValue: "_UIImagePickerControllerVideoEditingEnd")] as? Float
+            var duration: Float?
+            if let start = start, let end = end {
+                duration = start - end
+            } else {
+                duration = nil
+            }
             self.dismiss(animated: true)
-            convertVideoToGif(videoURL: videoURL)
+            convertVideoToGif(videoURL: videoURL, start: start, duration: duration)
         }
     }
 
@@ -79,8 +87,17 @@ extension UIViewController: UINavigationControllerDelegate, UIImagePickerControl
 
     // convert to GIF
 
-    func convertVideoToGif(videoURL: URL) {
-        let regift = Regift(sourceFileURL: videoURL, frameCount: kFrameCount, delayTime: kDelayTime, loopCount: kLoopCount)
+    func convertVideoToGif(videoURL: URL, start: Float?, duration: Float?) {
+        self.dismiss(animated: true)
+
+        let regift: Regift
+
+        if let start = start, let duration = duration {
+            regift = Regift(sourceFileURL: videoURL, destinationFileURL: nil, startTime: start, duration: duration, frameRate: kFrameRate, loopCount: kLoopCount)
+
+        } else {
+            regift = Regift(sourceFileURL: videoURL, frameCount: kFrameCount, delayTime: kDelayTime, loopCount: kLoopCount)
+        }
         let gifURL = regift.createGif()
         let gif = Gif(url: gifURL!, videoUrl: videoURL, caption: nil)
         displayGif(gif)
