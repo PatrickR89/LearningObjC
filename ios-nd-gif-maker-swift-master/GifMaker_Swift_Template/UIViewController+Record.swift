@@ -9,6 +9,7 @@
 import UIKit
 import MobileCoreServices
 import UniformTypeIdentifiers
+import AVFoundation
 
 let kFrameCount: Int = 16;
 let kDelayTime: Float = 0.2;
@@ -28,7 +29,7 @@ extension UIViewController: UINavigationControllerDelegate, UIImagePickerControl
             })
 
             let chooseFromExisting = UIAlertAction(title: "Choose from existing", style: .default, handler: { _ in
-                 self.launchPhotoLibrary()
+                self.launchPhotoLibrary()
             })
 
             let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -77,7 +78,11 @@ extension UIViewController: UINavigationControllerDelegate, UIImagePickerControl
                 duration = nil
             }
             self.dismiss(animated: true)
-            convertVideoToGif(videoURL: videoURL, start: start, duration: duration)
+            guard let start = start, let duration = duration else {
+                convertVideoToGif(videoURL: videoURL, start: start, duration: duration)
+                return
+            }
+            cropVideoToSquare(videoURL, start, duration)
         }
     }
 
@@ -107,5 +112,52 @@ extension UIViewController: UINavigationControllerDelegate, UIImagePickerControl
         let gifEditorVC = storyboard?.instantiateViewController(withIdentifier: "GifEditorViewController") as! GifEditorViewController
         gifEditorVC.gifUrl = gif.url!
         navigationController?.pushViewController(gifEditorVC, animated: true)
+    }
+
+    func createPath() -> URL {
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].path
+        var outputURL = path+"output"
+        do {
+            try FileManager().createDirectory(atPath: outputURL, withIntermediateDirectories: false)
+        } catch {
+            print("error occured during folder creation")
+        }
+        outputURL += "output.mov"
+        do {
+            try FileManager().removeItem(atPath: outputURL)
+        } catch {
+            print("error occured during cleanup of old file(s)")
+        }
+
+        return URL(string: outputURL)!
+    }
+
+    func cropVideoToSquare(_ rawVideoUrl: URL, _ start: Float, _ duration: Float) {
+        let videoAsset = AVAsset(url: rawVideoUrl)
+        let videoTrack = videoAsset.tracks(withMediaType: AVMediaType.video)[0]
+
+        let videoComposition = AVMutableVideoComposition()
+        videoComposition.renderSize = CGSize(width: videoTrack.naturalSize.width, height: videoTrack.naturalSize.height)
+        videoComposition.frameDuration = CMTime(seconds: 1, preferredTimescale: 30)
+        let instruction = AVMutableVideoCompositionInstruction()
+        instruction.timeRange = CMTimeRangeMake(start: .zero, duration: .init(value: 60, timescale: 30))
+
+        let transformer = AVMutableVideoCompositionLayerInstruction(assetTrack: videoTrack)
+        let t1 = CGAffineTransform().translatedBy(x: videoTrack.naturalSize.height, y: -(videoTrack.naturalSize.width - videoTrack.naturalSize.height)/2 ).rotated(by: .pi / 2)
+        transformer.setTransform(t1, at: .zero)
+
+        instruction.layerInstructions = [transformer]
+        videoComposition.instructions = [instruction]
+
+        let exporter = AVAssetExportSession(asset: videoAsset, presetName: AVAssetExportPresetHighestQuality)
+        exporter?.videoComposition = videoComposition
+        let path = createPath()
+        exporter?.outputURL = path
+        exporter?.outputFileType = .mov
+
+        exporter?.exportAsynchronously { [weak self] in
+            guard let url = exporter?.outputURL else {return}
+            self?.convertVideoToGif(videoURL: url, start: start, duration: duration)
+        }
     }
 }
