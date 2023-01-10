@@ -16,6 +16,10 @@ class SavedGifsViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if UserDefaults.standard.bool(forKey: "WelcomeScreenSeen") != true {
+            let welcomeViewController = storyboard?.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
+            navigationController?.pushViewController(welcomeViewController, animated: true)
+        }
         emptyCollection.isHidden = !gifs.isEmpty
         collectionView.reloadData()
 

@@ -20,7 +20,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        UserDefaults.standard.set(true, forKey: "WelcomeScreenSeen")
         // Do any additional setup after loading the view.
     }
     @IBAction func launchVideoCamera(_ sender: Any) {
