@@ -58,3 +58,10 @@ extension SavedGifsViewController: UICollectionViewDataSource {
         return cell
     }
 }
+
+extension SavedGifsViewController: GifPreviewViewControllerDelegate {
+    func previewViewController(_ viewController: GifPreviewViewController, didSaveGif gif: Gif) {
+        self.gifs.append(gif)
+        
+    }
+}

@@ -12,6 +12,7 @@
 		CD5DA1C429673A9100BD7608 /* GifPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DA1C329673A9100BD7608 /* GifPreviewViewController.swift */; };
 		CDBB3C23296C37F60063D352 /* SavedGifsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB3C22296C37F60063D352 /* SavedGifsViewController.swift */; };
 		CDBB3C26296C3BA70063D352 /* GifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB3C25296C3BA70063D352 /* GifCell.swift */; };
+		CDBB3C29296D75E60063D352 /* GifPreviewViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBB3C28296D75E60063D352 /* GifPreviewViewControllerDelegate.swift */; };
 		CDFA8327295C432D009DB63E /* UIViewController+Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA8326295C432D009DB63E /* UIViewController+Record.swift */; };
 		CDFA832B295C49B5009DB63E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA832A295C49B5009DB63E /* WelcomeViewController.swift */; };
 		CDFA832D295C5137009DB63E /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA832C295C5137009DB63E /* UIImage+Gif.swift */; };
@@ -32,6 +33,7 @@
 		CD5DA1C329673A9100BD7608 /* GifPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifPreviewViewController.swift; sourceTree = "<group>"; };
 		CDBB3C22296C37F60063D352 /* SavedGifsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedGifsViewController.swift; sourceTree = "<group>"; };
 		CDBB3C25296C3BA70063D352 /* GifCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCell.swift; sourceTree = "<group>"; };
+		CDBB3C28296D75E60063D352 /* GifPreviewViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifPreviewViewControllerDelegate.swift; sourceTree = "<group>"; };
 		CDFA8326295C432D009DB63E /* UIViewController+Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Record.swift"; sourceTree = "<group>"; };
 		CDFA832A295C49B5009DB63E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CDFA832C295C5137009DB63E /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 			name = ViewCell;
 			sourceTree = "<group>";
 		};
+		CDBB3C27296D75C40063D352 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				CDBB3C28296D75E60063D352 /* GifPreviewViewControllerDelegate.swift */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
 		CDFA8325295C4314009DB63E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +109,7 @@
 		CDFA8329295C497E009DB63E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CDBB3C27296D75C40063D352 /* Delegates */,
 				CDFA832A295C49B5009DB63E /* WelcomeViewController.swift */,
 				CDFA832E295C55C0009DB63E /* GifEditorViewController.swift */,
 				CD5DA1C329673A9100BD7608 /* GifPreviewViewController.swift */,
@@ -232,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDFA832B295C49B5009DB63E /* WelcomeViewController.swift in Sources */,
+				CDBB3C29296D75E60063D352 /* GifPreviewViewControllerDelegate.swift in Sources */,
 				CDBB3C23296C37F60063D352 /* SavedGifsViewController.swift in Sources */,
 				CDBB3C26296C3BA70063D352 /* GifCell.swift in Sources */,
 				EDFAA9201CDA9C3100D2CB08 /* Regift.swift in Sources */,

@@ -11,6 +11,7 @@ import UIKit
 class GifPreviewViewController: UIViewController {
 
     var gif: Gif?
+    weak var delegate: GifPreviewViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,5 +43,9 @@ class GifPreviewViewController: UIViewController {
             print(error)
         }
 
+    }
+    @IBAction func createAndSave(_ sender: Any) {
+        delegate?.previewViewController(self, didSaveGif: gif!)
+        navigationController?.popToRootViewController(animated: true)
     }
 }

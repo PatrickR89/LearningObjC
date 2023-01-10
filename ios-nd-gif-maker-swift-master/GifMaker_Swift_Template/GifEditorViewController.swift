@@ -46,6 +46,7 @@ class GifEditorViewController: UIViewController {
         let newGif = Gif(url: gifURL, videoUrl: (gif.videoUrl)!, caption: captionTextField.text)
 
         previewController.gif = newGif
+        previewController.delegate = self
 
         self.navigationController?.pushViewController(previewController, animated: true)
     }
@@ -89,5 +90,11 @@ extension GifEditorViewController {
         let userInfo = notification.userInfo
         let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue
         return keyboardSize.cgRectValue.height
+    }
+}
+
+extension GifEditorViewController: GifPreviewViewControllerDelegate {
+    func previewViewController(_ viewController: GifPreviewViewController, didSaveGif gif: Gif) {
+        <#code#>
     }
 }
