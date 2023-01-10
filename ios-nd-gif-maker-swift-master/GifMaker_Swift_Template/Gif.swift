@@ -17,7 +17,7 @@ enum GifProps: String {
     case gifData = "gifData"
 }
 
-class Gif: NSObject, NSCoding {
+class Gif: NSObject, NSCoding, NSSecureCoding {
 
     let url: URL?
     let videoUrl: URL?

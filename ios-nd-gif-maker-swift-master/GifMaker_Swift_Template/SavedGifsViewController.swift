@@ -25,8 +25,8 @@ class SavedGifsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         do {
-            let tempGifs = try NSKeyedUnarchiver.unarchivedObject(ofClass: Gif.self, from: Data(contentsOf: FileManager().getGifsDirectory()))
-            self.gifs = tempGifs
+            let tempGifs = try NSKeyedUnarchiver.unarchivedArrayOfObjects(ofClass: Gif.self, from: Data(contentsOf: FileManager().getGifsDirectory()))
+            self.gifs = tempGifs ?? []
             collectionView.reloadData()
         } catch {
             print("error occured while loading files!", error)
