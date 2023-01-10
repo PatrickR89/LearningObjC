@@ -52,7 +52,14 @@ extension SavedGifsViewController: UICollectionViewDelegateFlowLayout {
         return size
     }
 }
-extension SavedGifsViewController: UICollectionViewDelegate {}
+extension SavedGifsViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailViewController.gif = gifs[indexPath.item]
+        navigationController?.present(detailViewController, animated: true)
+        
+    }
+}
 extension SavedGifsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return gifs.count
